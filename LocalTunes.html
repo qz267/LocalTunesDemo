@@ -1,0 +1,143 @@
+<head> 
+    <title>LocalTunes</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+</head> 
+<body> 
+<div class="wrapper">
+    
+    <div data-role="page" id="page1">
+    
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Page 1</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is page 1 content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="page2">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Page 2</h1>
+        </div><!-- /header -->
+    
+        <div data-role="content">    
+            <p>This is page 2 content.</p>
+            <ul data-role="listview" data-inset="true">
+                <li>Item 1</li>    
+                <li>Item 2</li>
+            </ul>
+        </div><!-- /content -->
+    
+    </div><!-- /page -->
+    
+    <div data-role="page" id="menu" data-theme="b">
+        <div data-role="header">
+            <h1>Navigation</h1>
+        </div>
+        
+        <div data-role="content">
+            <ul data-role="listview">
+                <li><a href="#page1" class="menubtn" data-transition="slide">Page 1</a></li>
+                <li><a href="#page2" class="menubtn" data-transition="slide">Page 2</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>    
+
+<script>
+$(document).on("pageinit", "#page1", function(e){
+    var percent = .66;    
+    var menuStatus = false;
+    var margin = $(window).width() * percent;
+    var wheight = $(window).height();
+
+function initializeMenu(){
+  $("#menu").css({
+    'z-index': '-100',
+    width: margin,
+    height: wheight
+  }).page().show();
+};
+
+function sendForeground(){
+  $("#menu").css({
+    'z-index': '100'
+  });
+};
+
+function sendBackground(){
+  $("#menu").css({
+    'z-index': '-100'
+  });
+};
+  
+  function showMenu(){
+    if(menuStatus == false){
+      $(".ui-page-active").animate({
+        marginLeft: margin
+      }, 1400, function(){
+        sendForeground();
+      });
+      menuStatus = true;
+    } else {
+      sendBackground();
+      $(".ui-page-active").animate({
+        marginLeft: "0px"
+      }, 1400);
+      menuStatus = false;
+    }
+  };
+  
+  $(document).on("swiperight", function(e){
+    if(!menuStatus){
+      showMenu();
+    }
+  });
+  
+  $(document).on("swipeleft", function(e){
+    if(menuStatus){
+      showMenu();
+    }
+  });
+
+initializeMenu();
+
+$(document).on("click", ".showMenu", function(){
+    showMenu();    
+});
+
+      $(".menubtn").on("click", function(){
+        sendBackground();
+        $(".ui-page-active").animate({
+          marginLeft: "0px"
+        }, 0);
+        menuStatus = false;
+      });
+  });
+</script>
+<!-- <script src="http://static.jsbin.com/js/render/edit.js"></script> -->
+<script>jsbinShowEdit({"root":"http://static.jsbin.com","csrf":"LyA9vHC437fUbA1OyWmniHme"});</script>
+<!-- <script src="http://static.jsbin.com/js/vendor/eventsource.js"></script>
+<script src="http://static.jsbin.com/js/spike.js"></script> -->
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1656750-34']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+</body>
