@@ -5,22 +5,170 @@
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
-</head> 
-<body> 
+</head>
+<body>
 <div class="wrapper">
-    
-    <div data-role="page" id="page1">
-    
+
+
+    <div data-role="page" id="home">
+
         <div data-role="header">
           <a href="#" class="showMenu">Menu</a>
-            <h1>Page 1</h1>
+          <a href="#mapView" data-transition="fade" data-icon = "grid">Map View</a>
+            <h1>List View</h1>
         </div><!-- /header -->
 
         <div data-role="content">
-            <p>This is page 1 content.</p>
+                <div class="content-primary"> 
+    <ul data-role="listview">
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-bb.jpg" />
+        <h3>Broken Bells</h3>
+        <p>Broken Bells</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-hc.jpg" />
+        <h3>Warning</h3>
+        <p>Hot Chip</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-p.jpg" />
+        <h3>Wolfgang Amadeus Phoenix</h3>
+        <p>Phoenix</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-ok.jpg" />
+        <h3>Of The Blue Colour Of The Sky</h3>
+        <p>Ok Go</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-ws.jpg" />
+        <h3>Elephant</h3>
+        <p>The White Stripes</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-rh.jpg" />
+        <h3>Kid A</h3>
+        <p>Radiohead</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-xx.jpg" />
+        <h3>XX</h3>
+        <p>XX</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-mg.jpg" />
+        <h3>Congratulations</h3>
+        <p>MGMT</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-ag.jpg" />
+        <h3>Ashes Grammar</h3>
+        <p>A Sunny Day in Glasgow</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-k.jpg" />
+        <h3>Hot Fuss</h3>
+        <p>Killers</p>
+      </a></li>
+      <li><a href="#musicDetail" data-transition="slide">
+        <img src="images/album-af.jpg" />
+        <h3>The Suburbs</h3>
+        <p>Arcade Fire</p>
+      </a></li>
+    </ul>
+    </div>
+
         </div><!-- /content -->
 
     </div><!-- /page -->
+
+
+    <div data-role="page" id="Search">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Search</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is search content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+    <div data-role="page" id="Setting">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Setting Page</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is Setting page content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+    <div data-role="page" id="Favor">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Favor Page</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is Favor page content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+    <div data-role="page" id="Event">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+            <h1>Event Page</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is Event page content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+
+    <div data-role="page" id="musicDetail" data-add-back-btn="true">
+
+        <div data-role="header">
+            <h1>Music Detail</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is music detail content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+    <div data-role="page" id="mapView">
+
+        <div data-role="header">
+          <a href="#" class="showMenu">Menu</a>
+          <a href="#home " data-transition="fade" data-icon="grid" data-iconpos = "left">List View</a>
+            <h1>Map View</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <p>This is Event page content.</p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
 
     <div data-role="page" id="page2">
 
@@ -28,35 +176,38 @@
           <a href="#" class="showMenu">Menu</a>
             <h1>Page 2</h1>
         </div><!-- /header -->
-    
-        <div data-role="content">    
+
+        <div data-role="content">
             <p>This is page 2 content.</p>
             <ul data-role="listview" data-inset="true">
-                <li>Item 1</li>    
+                <li>Item 1</li>
                 <li>Item 2</li>
             </ul>
         </div><!-- /content -->
-    
+
     </div><!-- /page -->
-    
-    <div data-role="page" id="menu" data-theme="b">
-        <div data-role="header">
-            <h1>Navigation</h1>
-        </div>
-        
+
+
+<!-- Menu panel -->
+    <div data-role="page" id="menu" data-theme="a">
+
+
         <div data-role="content">
             <ul data-role="listview">
-                <li><a href="#page1" class="menubtn" data-transition="slide">Page 1</a></li>
-                <li><a href="#page2" class="menubtn" data-transition="slide">Page 2</a></li>
+                <li><a href="#home" class="menubtn" data-transition="slide">Home</a></li>
+                <li><a href="#Search" class="menubtn" data-transition="slide">Search</a></li>
+                <li><a href="#Setting" class="menubtn" data-transition="slide">Setting</a></li>
+                <li><a href="#Favor" class="menubtn" data-transition="slide">Favor</a></li>
+                <li><a href="#Event" class="menubtn" data-transition="slide">Event</a></li>
             </ul>
         </div>
     </div>
-    
-</div>    
+
+</div>
 
 <script>
-$(document).on("pageinit", "#page1", function(e){
-    var percent = .66;    
+$(document).on("pageinit", "#home", function(e){
+    var percent = .66;
     var menuStatus = false;
     var margin = $(window).width() * percent;
     var wheight = $(window).height();
@@ -85,7 +236,7 @@ function sendBackground(){
     if(menuStatus == false){
       $(".ui-page-active").animate({
         marginLeft: margin
-      }, 1400, function(){
+      }, 500, function(){
         sendForeground();
       });
       menuStatus = true;
@@ -93,7 +244,7 @@ function sendBackground(){
       sendBackground();
       $(".ui-page-active").animate({
         marginLeft: "0px"
-      }, 1400);
+      }, 500);
       menuStatus = false;
     }
   };
@@ -124,20 +275,5 @@ $(document).on("click", ".showMenu", function(){
         menuStatus = false;
       });
   });
-</script>
-<!-- <script src="http://static.jsbin.com/js/render/edit.js"></script> -->
-<script>jsbinShowEdit({"root":"http://static.jsbin.com","csrf":"LyA9vHC437fUbA1OyWmniHme"});</script>
-<!-- <script src="http://static.jsbin.com/js/vendor/eventsource.js"></script>
-<script src="http://static.jsbin.com/js/spike.js"></script> -->
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-1656750-34']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-})();
 </script>
 </body>
