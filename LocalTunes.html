@@ -18,7 +18,7 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          center: new google.maps.LatLng(60.73233204945973,-73.99873495101929),
           zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -41,7 +41,7 @@
     </script>
 
 </head>
-<body onload="initialize()">
+<body>
   <!-- here load map initializer -->
 <div class="wrapper">
 
@@ -74,46 +74,19 @@
 
 
 
-<!-- General -->
-  <div data-role="page" id="listView">
-
-    <div data-role="header">
-      <a href="#" class="showMenu">Menu</a>
-      <a href="#mapView" data-transition="fade" data-icon = "grid">Map View</a>
-      <h1>List View</h1>
-    </div>
-    <!-- /header -->
-
-    <div data-role="content" >
-      <ul data-role="listview" data-filter="true">
-        <li data-role="list-divider">May 13, 2013</li>
-        <li><a href="index.html">Act_1</a></li>
-        <li><a href="index.html">Audi</a></li>
-        <li><a href="index.html">BMW</a></li>
-        <li><a href="index.html">Cadillac</a></li>
-        <li><a href="index.html">Ferrari</a></li>
-      </ul>
-    </div>
-  <!-- /content -->
-
-</div>
-<!-- /page -->
-
-
-
-
 <!-- Jazz and Bluesy -->
   <div data-role="page" id="listView_JB" data-add-back-btn="true">
 
     <div data-role="header">
       <a href="#" class="showMenu">Menu</a>
-      <a href="#mapView" data-transition="fade" data-icon = "grid">Map View</a>
+      <a href="Lib/html/mapView.html" rel="external" data-transition="fade" data-icon = "grid">Map View</a>
       <h1>Jazz and Bluesy</h1>
     </div>
     <!-- /header -->
 
     <div data-role="content" >
       <ul data-role="listview" data-filter="true">
+      <li data-role="list-divider">May 13th, 2013</li>
       <li><a href="index.html">
         <img src="http://userserve-ak.last.fm/serve/126/60075895.png" />
         <h3>Beth Hart</h3>
@@ -155,12 +128,13 @@
 
     <div data-role="header">
       <a href="#" class="showMenu">Menu</a>
-      <a href="#mapView" data-transition="fade" data-icon = "grid">Map View</a>
+      <a href="Lib/html/mapView.html" rel="external" data-transition="fade" data-icon = "grid">Map View</a>
       <h1>Velvet Rock</h1>
     </div>
     <!-- /header -->
     <div data-role="content" >
       <ul data-role="listview" data-filter="true">
+            <li data-role="list-divider">May 13th, 2013</li>
       <li><a href="index.html">
         <img src="http://userserve-ak.last.fm/serve/252/85315697.png"/>
         <h3>Foxygen</h3>
@@ -189,6 +163,8 @@
         <p>Saint Vitus New York, NY</p>
         </a>
       </li>
+            <li data-role="list-divider">May 12th, 2013</li>
+
       <li><a href="index.html">
         <img src="http://userserve-ak.last.fm/serve/126/71705186.jpg"/>
         <h3>September Mourning</h3>
@@ -217,13 +193,14 @@
 
     <div data-role="header">
       <a href="#" class="showMenu">Menu</a>
-      <a href="#mapView" data-transition="fade" data-icon = "grid">Map View</a>
+      <a href="Lib/html/mapView.html" rel="external" data-transition="fade" data-icon = "grid">Map View</a>
       <h1>Happy Pop</h1>
     </div>
     <!-- /header -->
 
     <div data-role="content" >
       <ul data-role="listview" data-filter="true">
+            <li data-role="list-divider">May 13th, 2013</li>
       <li><a href="index.html">
         <img src="http://userserve-ak.last.fm/serve/126/60075895.png" />
         <h3>Beth Hart</h3>
@@ -297,21 +274,6 @@
 </div>
 <!-- /page -->
 
-<div data-role="page" id="Setting">
-
-  <div data-role="header">
-    <a href="#" class="showMenu">Menu</a>
-    <h1>Setting Page</h1>
-  </div>
-  <!-- /header -->
-
-  <div data-role="content">
-    <p>This is Setting page content.</p>
-  </div>
-  <!-- /content -->
-
-</div>
-<!-- /page -->
 
 <div data-role="page" id="Favor">
 
@@ -322,7 +284,9 @@
   <!-- /header -->
 
   <div data-role="content">
-    <p>This is Favor page content.</p>
+    <ul>
+      <li>You have no favor yet.</li>
+    </ul>
   </div>
   <!-- /content -->
 
@@ -340,6 +304,15 @@
   <div data-role="content">
     <divstyle="text-align:center">
       <img src="http://userserve-ak.last.fm/serve/126/81023761.png" />
+      <h2> Artist Name</h2>
+      <h3>Phoenix</h3>
+      <h2>Venue</h2>
+      <h3>Apollo Theater New York, NY</h3>
+      <h2>Time</h2>
+      <h3>20:00:00</h3>
+      <h2>Date</h2>
+      <h3>2013-05-13</h3>
+      <a tel:(917)364-2555 data-role="button">Call for tickets</a>
     </div>
   </div>
   <!-- /content -->
@@ -349,16 +322,13 @@
 
 
 <!-- map view page -->
-<div data-role="page" id="mapView">
+<div data-role="page" id="mapView" data-add-back-btn="true">
   <div data-role="header">
-    <a href="#" class="showMenu">Menu</a>
-    <a href="#listView" data-transition="fade" data-icon="grid" data-iconpos = "left">List View</a>
     <h1>Map View</h1>
   </div data-role="content">
 <div id="map_canvas" style="width:1000; height:1000"></div>
 </div>
 <!-- /content -->
-
 </div>
 <!-- /page -->
 
